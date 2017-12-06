@@ -29,8 +29,10 @@ mariadb:
     - "3306:3306"
   volumes:
     - ./docker/mysql/db:/var/lib/mysql
+    - ./docker/mysql/conf:/etc/mysql/conf.d
   environment:
     - MYSQL_ROOT_PASSWORD=KthJ8k2DE4q3
     - MYSQL_DATABASE=flarum
     - MYSQL_USER=flarum
     - MYSQL_PASSWORD=277F9fqGEgyB
+    - MYSQL_MAX_ALLOWED_PACKET=512
